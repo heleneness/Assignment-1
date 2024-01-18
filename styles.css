@@ -1,0 +1,31 @@
+* {
+	font-family: 'Courier New', Courier, monospace;
+	margin: 0;
+	padding: 0;
+}
+  
+  header, nav, main, footer {
+	margin: 20px;
+  }
+  
+  nav ul {
+	list-style-type: none;
+	padding: 0;
+	display: flex;
+  }
+  
+  nav li {
+	margin-right: 20px;
+  }
+  
+  main {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+	gap: 20px;
+  }
+  
+  footer {
+	margin-top: 20px;
+	text-align: center;
+  }
+  
