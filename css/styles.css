@@ -54,16 +54,22 @@
 	flex-wrap: wrap;
 	flex-direction: row;
 	justify-content: space-evenly;
-	
   }
   
   .card {
-	border: 2px outset var(--darkGrey);
+	border: 1px solid var(--lightGrey);	
 	border-radius: 12px;
-	backdrop-filter: blur(60px);
+	backdrop-filter: blur(0px);
 	margin-top: 30px;
-	padding: 30px;
+	padding-left: 10px;
 	width: 45vh;
+  }
+
+  img {
+	width: 20vh;
+	height: 20vh;
+	border-radius: 50%;
+	padding-top: 10px;
   }
   
   .indented {
@@ -75,7 +81,9 @@
   p {
 	color: var(--yellow);
 	font-size: 18px;
-  }
+	font-family: 'Courier New', Courier, monospace;
+	font-style: oblique;
+}
   
   .scroller {
 	position: fixed;

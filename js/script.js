@@ -1,6 +1,5 @@
 const filter = ["created", "edited"];
 const baseUrl = "https://swapi.dev/api";
-
 const menuBar = document.getElementById("menuBar");
 const content = document.getElementById("content");
 
@@ -48,6 +47,14 @@ function showData(data) {
   data.results.slice(0, 6).forEach((item) => {
     const card = document.createElement("div");
     card.className = "card";
+
+    // Images
+    const image = document.createElement("img");
+    const imageName = `${item.name}.png`;
+    const imageTitle = `${item.title}.png`;
+    image.src = `assets/${imageName}`;
+    image.title = imageTitle;
+    card.appendChild(image);
 
     for (const [key, value] of Object.entries(item)) {
       try {
@@ -117,6 +124,7 @@ function clearContent(element) {
   }
 }
 
+// STYLING/EXTRA
 const titleCase = (s) =>
   s
     .replace(/^[-_]*(.)/, (_, c) => c.toUpperCase())
