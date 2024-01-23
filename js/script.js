@@ -50,8 +50,8 @@ function showData(data) {
 
     // Images
     const image = document.createElement("img");
-    const imageName = `${item.name}.png`;
-    const imageTitle = `${item.title}.png`;
+    const imageName = `${item.name}.jpg`;
+    const imageTitle = `${item.title}.jpg`;
     image.src = `assets/${imageName}`;
     image.title = imageTitle;
     card.appendChild(image);
@@ -69,17 +69,10 @@ function showData(data) {
         } else {
           const p = document.createElement("p");
           p.innerHTML = `${titleCase(key)}: ${value}`;
-
           card.appendChild(p);
-          card.dataset.url = item.url;
-          card.addEventListener("click", () => {
-            showAllData(item);
-          });
-
           content.appendChild(card);
         }
       } catch (error) {
-        //console.log(error);
       }
     }
   });
@@ -141,5 +134,3 @@ window.onscroll = () => {
     "scroller"
   ).style.background = `linear-gradient(to bottom, rgb(249, 226, 43) ${scrollPercentRounded}%, #0000 ${scrollPercentRounded}%)`;
 };
-
-

@@ -6,6 +6,8 @@
 The purpose of this assignment is to obtain practical training in working with the Fetch
 API and handling responses.
 
+Background image from Pixabay - free royalty.
+
 Images are from Stylar.ai - made prompt:
 Star Wars make an action drawing (name/title of the cards), magical, black and white.
 

@@ -7,6 +7,7 @@
   
   body {
 	width: 100vw;
+	height: 100vw;
 	margin: 0;
 	display: flex;
 	justify-content: center;
@@ -48,6 +49,15 @@
   .active {
 	font-family: "SF Distant Galaxy", sans-serif;
   }
+
+  .intro {
+	font-family: "SF Distant Galaxy", sans-serif;
+	font-size: 30px;
+	width: 40vw;
+	padding-top: 20%;
+	margin-left: auto;
+	margin-right: auto;
+  }
   
   .content {
 	display: flex;
@@ -57,6 +67,7 @@
   }
   
   .card {
+	background-color: rgba(179, 128, 255, 0.5);	
 	border: 1px solid var(--lightGrey);	
 	border-radius: 12px;
 	backdrop-filter: blur(0px);
