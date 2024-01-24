@@ -50,9 +50,9 @@ function showData(data) {
 
     // Images
     const image = document.createElement("img");
-    const imageName = `${item.name}.jpg`;
-    const imageTitle = `${item.title}.jpg`;
-    image.src = `assets/${imageName}`;
+    const imageName = `${item.name}.png`;
+    const imageTitle = `${item.title}.png`;
+    image.src = `../assets/${imageName}`;
     image.title = imageTitle;
     card.appendChild(image);
 
