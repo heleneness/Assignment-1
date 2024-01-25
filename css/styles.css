@@ -20,6 +20,10 @@
 	color: var(--yellow);
     padding-left: 1rem;
 }
+
+.hidden {
+	display: none;
+  }
   
   .wrapper {
 	width: 100vw;
@@ -37,7 +41,7 @@
   .menuItem {
 	color: var(--yellow);
 	font-family: "SF Distant Galaxy Outline", sans-serif;
-	font-size: 30px;
+	font-size: 25px;
 	letter-spacing: 2px;
 	text-decoration: none;
   }
@@ -114,5 +118,5 @@
 	stroke-linejoin: round;
 	stroke-miterlimit: 10;
 	stroke-width: 2;
-  }
+  }  
   

@@ -8,7 +8,7 @@ API and handling responses.
 
 Background image from Pixabay - free royalty.
 
-Images are from picsart.com & Stylar.ai - made prompt:
+Images are from picsart.com & stylar.ai - made prompt:
 Star Wars make an action drawing (name/title of the cards), magical, black and white.
 
 Fonts:

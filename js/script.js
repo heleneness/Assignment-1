@@ -34,10 +34,15 @@ async function menuClick(e) {
 
   const data = await getData(e.target.href);
   showData(data);
+
+  document.querySelector(".intro")?.classList.add("hidden");
 }
 
 async function getData(url) {
   const response = await fetch(url);
+  if (!response.ok) {
+    throw new Error("Failed to fetch data");
+  }
   return await response.json();
 }
 
@@ -50,10 +55,11 @@ function showData(data) {
 
     // Images
     const image = document.createElement("img");
-    const imageName = `${item.name}.png`;
-    const imageTitle = `${item.title}.png`;
+    const imageName = item.name ? `${item.name}.png` : `${item.title}.png`;
+    const imageTitle = item.name ? `${item.name}.png` : `${item.title}.png`;
     image.src = `../assets/${imageName}`;
     image.title = imageTitle;
+
     card.appendChild(image);
 
     for (const [key, value] of Object.entries(item)) {
@@ -72,7 +78,9 @@ function showData(data) {
           card.appendChild(p);
           content.appendChild(card);
         }
-      } catch (error) {
+      } 
+      
+      catch (error) {
       }
     }
   });
@@ -132,5 +140,5 @@ window.onscroll = () => {
 
   document.getElementById(
     "scroller"
-  ).style.background = `linear-gradient(to bottom, rgb(249, 226, 43) ${scrollPercentRounded}%, #0000 ${scrollPercentRounded}%)`;
+  ).style.backgroundImage = `linear-gradient(to bottom, rgb(249, 226, 43) ${scrollPercentRounded}%, #0000 ${scrollPercentRounded}%)`;
 };
