@@ -3,6 +3,9 @@ const baseUrl = "https://swapi.dev/api";
 const menuBar = document.getElementById("menuBar");
 const content = document.getElementById("content");
 
+
+// Fetch data from URL, iterate data, exclude species and starships
+
 fetch(baseUrl)
   .then((response) => {
     return response.json();
@@ -10,13 +13,12 @@ fetch(baseUrl)
   .then((data) => {
     for (const key in data) {
       if (key !== "species" && key !== "starships") {
+        
         let menuItem = document.createElement("a");
-
         menuItem.innerText = key;
         menuItem.href = data[key];
         menuItem.className = "menuItem";
         menuItem.addEventListener("click", menuClick);
-
         menuBar.appendChild(menuItem);
       }
     }
@@ -25,6 +27,8 @@ fetch(baseUrl)
     console.log(error);
   });
 
+
+// Handle menu
 
 async function menuClick(e) {
   e.preventDefault();
@@ -46,6 +50,9 @@ async function getData(url) {
   return await response.json();
 }
 
+
+// Iterate result in the data
+
 function showData(data) {
   content.innerHTML = "";
 
@@ -53,7 +60,9 @@ function showData(data) {
     const card = document.createElement("div");
     card.className = "card";
 
+
     // Images
+
     const image = document.createElement("img");
     const imageName = item.name ? `${item.name}.png` : `${item.title}.png`;
     const imageTitle = item.name ? `${item.name}.png` : `${item.title}.png`;
@@ -85,6 +94,9 @@ function showData(data) {
     }
   });
 }
+
+
+// Display data
 
 async function showAllData(data) {
   clearContent(content);
@@ -125,7 +137,8 @@ function clearContent(element) {
   }
 }
 
-// STYLING/EXTRA
+// Styling background gradient based on scroll position
+
 const titleCase = (s) =>
   s
     .replace(/^[-_]*(.)/, (_, c) => c.toUpperCase())
