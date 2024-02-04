@@ -16,6 +16,8 @@
 	background-size: cover;
   }
 
+/* Styles for "planet" - back to homepage */
+
   h1 {
 	color: var(--yellow);
     padding-left: 1rem;
@@ -29,6 +31,9 @@
 	width: 100vw;
 	padding: 0 20px;
   }
+
+
+  /* Menu bar, items, active */
   
   .menuBar {
 	width: 100%;
@@ -54,6 +59,9 @@
 	font-family: "SF Distant Galaxy", sans-serif;
   }
 
+
+  /* Intro paragraph element */
+
   .intro {
 	font-family: "SF Distant Galaxy", sans-serif;
 	font-size: 30px;
@@ -62,6 +70,9 @@
 	margin-left: auto;
 	margin-right: auto;
   }
+
+
+  /* Styles for content */
   
   .content {
 	display: flex;
@@ -69,6 +80,9 @@
 	flex-direction: row;
 	justify-content: space-evenly;
   }
+
+
+  /* Styles for cards */
   
   .card {
 	background-color: rgba(179, 128, 255, 0.5);	
@@ -80,18 +94,27 @@
 	width: 45vh;
   }
 
+
+  /* Images */
+
   img {
 	width: 20vh;
 	height: 20vh;
 	border-radius: 50%;
 	padding-top: 10px;
   }
+
+
+  /* Indented elements */
   
   .indented {
 	border-left: 1px solid var(--darkGrey);
 	margin-left: 5px;
 	text-indent: 5px;
   }
+
+
+  /* Styles for paragraphs */
   
   p {
 	color: var(--yellow);
@@ -99,6 +122,8 @@
 	font-family: 'Courier New', Courier, monospace;
 	font-style: oblique;
 }
+
+/* Scroll bar */
   
   .scroller {
 	position: fixed;
