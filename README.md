@@ -19,4 +19,6 @@ https://swapi.dev/
 SWAPI API documentation
 https://swapi.dev/documentation
 
+Link to GitHub: https://github.com/heleneness/Assignment-1.git
+
 Link to Netlify: https://eclectic-zabaione-881415.netlify.app
